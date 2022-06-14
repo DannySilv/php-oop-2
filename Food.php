@@ -14,5 +14,9 @@ class Food {
     $this->expireDate = $_expireDate;
     $this->price = $_price;
   }
+
+  public function printInfo() {
+    return "$this->brand $this->type $this->weight $this->expireDate € $this->price";
+  }
 }
 ?>
