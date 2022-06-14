@@ -1,13 +1,16 @@
 <?php
 class Food {
+  public $name;
   public $brand;
   public $type;
   public $weight;
   public $expireDate;
   public $price;
+  public $available = true;
 
-  function __construct($_brand, $_type, $_weight, $_expireDate, $_price)
+  function __construct($_name, $_brand, $_type, $_weight, $_expireDate, $_price)
   {
+    $this->name = $_name;
     $this->brand = $_brand;
     $this->type = $_type;
     $this->weight = $_weight;
@@ -16,7 +19,7 @@ class Food {
   }
 
   public function printInfo() {
-    return "$this->brand $this->type $this->weight $this->expireDate € $this->price";
+    return "$this->name" . " - " . "$this->brand" . ", " . "$this->type" . ", " . "$this->weight" . ", " . "$this->expireDate" . ", " . "€ $this->price";
   }
 }
 ?>
