@@ -1,7 +1,7 @@
 <?php
 class Product {
   public $name;
-  public $prezzo;
+  public $price;
   public $available = true;
 
   function __construct($_name, $_price) {
@@ -10,7 +10,7 @@ class Product {
   }
 
   public function printInfo() {
-    return "$this->nome" . " - " . "€ $this->price";
+    return "$this->name" . " - " . "€ $this->price";
   }
 }
 ?>

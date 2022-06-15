@@ -16,7 +16,7 @@ class Food extends Product{
   }
 
   public function printInfo() {
-    return "$this->nome" . " - " . "$this->brand" . ", " . "$this->type" . ", " . "$this->weight" . ", " . "$this->expireDate" . ", " . "€ $this->price";
+    return "$this->name" . " - " . "$this->brand" . ", " . "$this->type" . ", " . "$this->weight" . ", " . "$this->expireDate" . ", " . "€ $this->price";
   }
 }
 ?>

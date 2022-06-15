@@ -12,7 +12,7 @@ class User {
     $this->paymentAcceptable = $_paymentAcceptable;
   }
   
-  function toCart($_product) {
+  public function toCart($_product) {
     if ($_product->available) {
       $this->cart[] = $_product;
     } else {
@@ -20,12 +20,12 @@ class User {
     }
   }
 
-  function register() {
+  public function register() {
     $this->registered = true;
     return "Benvenuto " . "$this->name" . "! Ora sei registrato e potrai accedere ai nostri sconti!";
   }
 
-  function getTotal() {
+  public function getTotal() {
     $total = 0;
     foreach($this->cart as $element) {
       $total += $element->price;
@@ -37,7 +37,7 @@ class User {
     }
   }
 
-  function isPaymentExpired() {
+  public function isPaymentExpired() {
     return $this->paymentAcceptable;
   }
 }
