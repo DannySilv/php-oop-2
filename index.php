@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . "/Product.php";
 require_once __DIR__ . "/Food.php";
 require_once __DIR__ . "/Games.php";
 require_once __DIR__ . "/Kennels.php";
@@ -22,8 +23,6 @@ $daniele = new User("Daniele", "daniele@hotmail.it", true);
 $daniele->toCart($umido);
 $daniele->toCart($cuccia2);
 $daniele->toCart($gomitolo);
-
-var_dump($daniele);
 
 // Faccio in modo che la carta del secondo utente non sia valida
 $matteo = new User("Matteo", "matteo@outlook.it", false);

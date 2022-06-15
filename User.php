@@ -15,7 +15,6 @@ class User {
   function toCart($_product) {
     if ($_product->available) {
       $this->cart[] = $_product;
-      return true;
     } else {
       return false;
     }
@@ -29,11 +28,9 @@ class User {
   function getTotal() {
     $total = 0;
     foreach($this->cart as $element) {
-      $total = $total + $element->price;
+      $total += $element->price;
       if ($this->registered) {
-        $discount = $total * 20 / 100;
-        $newPrice = $total - $discount;
-        return $newPrice;
+        return $total * 0.8;
       } else {
         return $total;
       }

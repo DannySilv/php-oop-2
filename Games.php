@@ -1,21 +1,18 @@
 <?php
-class Games {
-  public $name;
+require_once __DIR__ . "/Product.php";
+class Games extends Product{
   public $material;
   public $size;
-  public $price;
-  public $available = true;
 
   function __construct($_name, $_material, $_size, $_price)
   {
-    $this->name = $_name;
+    parent::__construct($_name, $_price);
     $this->material = $_material;
     $this->size = $_size;
-    $this->price = $_price;
   }
 
   public function printInfo() {
-    return "$this->name" . " - " . "$this->material" . ", " . "$this->size" . ", " . "€ $this->price";
+    return "$this->nome" . " - " . "$this->material" . ", " . "$this->size" . " - " . "€ $this->price";
   }
 }
 ?>
